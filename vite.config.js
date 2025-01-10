@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite';
 const { resolve } = require('path');
 
@@ -6,16 +7,28 @@ module.exports = defineConfig({
     build: {
         rollupOptions: {
             emptyOutDir: true,
+            input: {
+                app: fileURLToPath(new URL('./src/js/app.js', import.meta.url)),
+                style: fileURLToPath(new URL('./src/scss/app.scss', import.meta.url)),
+            },
             output: {
-                dir: resolve(__dirname, './dist'),
-                entryFileNames: 'js/app.min.js',
-                assetFileNames: 'css/app.min.css',
+                assetFileNames: (assetInfo) => {
+                    var info = assetInfo.name.split(".");
+                    var extType = info[info.length - 1];
+                    if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+                        extType = "img";
+                    } else if (/scss|css/.test(extType)) {
+                        extType = "css";
+                    } else if (/woff|woff2|ttf|html/.test(extType)) {
+                        extType = "fonts";
+                    }
+                    return `${extType}/[name]-[hash][extname]`;
+                },
+                chunkFileNames: "js/[name]-[hash].js",
+                entryFileNames: "js/[name]-[hash].js",
+
             },
         },
-    },
-    resolve: {
-        alias: {
-            '@': resolve(__dirname, './src'),
-        },
+        outDir: resolve(__dirname, './dist'),
     },
 });

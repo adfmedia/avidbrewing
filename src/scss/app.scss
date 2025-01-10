@@ -1,3 +1,21 @@
+@import 'base/base',
+'base/fonts',
+'components/iconfont';
+//'variables';  // Note - all variables moved into tailwind config to allow for full tailwind usage
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import 'components/typography',
+'components/animations',
+'components/buttons',
+'components/forms',
+'components/compdetails',
+'components/listings',
+'components/countdown',
+'components/search',
+'components/carousels',
+'components/accordions',
+'components/effects';
