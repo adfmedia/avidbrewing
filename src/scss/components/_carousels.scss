@@ -1,0 +1,54 @@
+@layer components {
+    .testimonials-carousel {
+        .swiper-slide {
+            @apply h-auto;
+        }
+    }
+}
+.swiper-container {
+    padding-bottom: 30px;
+}
+.swiper-container .swiper-button-prev{
+    left: 5px;
+    max-width: 23px;
+    max-height: 25px;
+    background: white;
+    border-radius: 50%;
+    @media screen and (max-width: 779px) {
+        left: 5px;
+    }
+}
+.swiper-container .swiper-button-next{
+    right: 5px;
+    max-width: 25px;
+    max-height: 25px;
+    background: white;
+    border-radius: 50%;
+
+}
+.swiper-container .swiper-button-prev:before {
+    content: "\68";
+    font-family: baseline;
+    font-size: 0.75rem;
+    width: inherit;
+    color: black;
+    text-align: center;
+    padding-right: 0.2rem;
+
+}
+.swiper-container .swiper-button-prev::after {
+    display: none;
+}
+.swiper-container .swiper-button-next:before {
+    content: "\69";
+    font-family: baseline;
+    font-size: 0.75rem;
+    width: inherit;
+    color: black;
+    text-align: center;
+
+}
+
+.swiper-container .swiper-button-next::after {
+    display: none;
+}

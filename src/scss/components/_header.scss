@@ -1,0 +1,54 @@
+/* Menu Button 1 */
+.menu-btn-1 {
+    height: 32px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.menu-btn-1 span,
+.menu-btn-1 span::before,
+.menu-btn-1 span::after {
+    background: red;
+    border-radius: 3px;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    margin-top: 13px;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.menu-btn-1 span::before {
+    margin-top:-12px;
+}
+
+.menu-btn-1 span::after {
+    margin-top:12px;
+}
+
+.menu-btn-1.active span {
+    background: transparent;
+}
+
+.menu-btn-1.active span::before {
+    margin-top: 0;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menu-btn-1.active span::after {
+    margin-top: 0;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+

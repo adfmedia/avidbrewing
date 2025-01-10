@@ -1,0 +1,24 @@
+@layer components {
+    .btn {
+        @apply cursor-pointer bg-primary pt-2 pb-3 pl-3 pr-6  text-lg font-serenityBold text-gray-900 uppercase transition-all hover:bg-secondary;
+
+        &--secondary {
+            @apply bg-secondary hover:bg-primary;
+        }
+        &--secondary-outline {
+            @apply text-white bg-gray-900 border-2 border-secondary hover:bg-primary hover:border-primary hover:text-gray-900;
+        }
+
+        &--black {
+            @apply bg-gray-800 hover:bg-gray-900 focus-visible:outline-gray-800;
+        }
+
+        &--red {
+            @apply bg-red-600 hover:bg-red-700 focus-visible:outline-red-700;
+        }
+
+        &--green {
+            @apply bg-primary hover:bg-secondary group-hover:bg-secondary focus-visible:outline-green-700;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@layer base {
+    body {
+
+
+    }
+    html {
+        @apply text-base scroll-smooth;
+    }
+    #freeEntry {
+        @apply scroll-mt-36;
+
+    }
+    h1 {
+        @apply font-serenity;
+    }
+    h2, h3, h4, h5, h6 {
+        @apply leading-8 font-serenity;
+    }
+    .font-serenityMedium {
+        @apply font-semibold;
+    }
+    .font-serenityBold {
+        @apply font-bold;
+    }
+    .font-serenity {
+        @apply font-normal;
+    }
+    .swiper-slide.swiper-hidden {
+        @apply hidden;
+    }
+    [x-cloak] { display: none ; }
+    select {
+        @apply appearance-none indent-px;
+    }
+
+    .filter-white {
+        filter: brightness(0) invert(1);
+    }
+
+    .filter-black {
+        filter: brightness(0%);
+    }
+
+    .filter-green {
+        filter: invert(6%) sepia(46%) saturate(4610%) hue-rotate(248deg) brightness(106%) contrast(97%);
+    }
+
+    .filter-blue {
+        filter: invert(64%) sepia(60%) saturate(534%) hue-rotate(169deg) brightness(93%) contrast(94%);
+    }
+
+    .filter-gray-500 {
+        filter: invert(47%) sepia(8%) saturate(951%) hue-rotate(183deg) brightness(91%) contrast(97%);
+    }
+
+    .breadcrumbs {
+        li {
+            @apply flex min-w-min;
+            svg {
+                position: relative;
+            }
+        }
+
+        li:last-of-type  {
+            min-width: 0!important;
+
+            svg {
+                @apply flex-shrink-0;
+            }
+
+            div {
+                @apply truncate #{!important};
+            }
+        }
+
+    }
+
+    .header-nav {
+        a {
+            @apply relative text-white uppercase no-underline  py-1;
+
+            &:after {
+                content: "";
+                background: none repeat scroll 0 0 transparent;
+                @apply bg-secondary transition-all duration-300 w-0 left-1/2 absolute h-0.5 bottom-0;
+            }
+            &:hover {
+                &:after {
+                    @apply w-full left-0;
+                }
+            }
+
+        }
+        a.current {
+            @apply relative;
+
+            &:after {
+                content: "";
+                @apply absolute left-0 bottom-0 h-0.5 w-full bg-secondary;
+            }
+        }
+    }
+
+    .mobile-nav {
+        a {
+            @apply relative text-white uppercase no-underline  py-1;
+
+            &:after {
+                content: "";
+                background: none repeat scroll 0 0 transparent;
+                @apply bg-secondary transition-all duration-300 w-0 left-1/2 absolute h-0 bottom-0;
+            }
+            &:hover {
+                &:after {
+                    @apply w-full left-0;
+                }
+            }
+
+        }
+        a.current {
+            @apply relative;
+
+            &:after {
+                content: "";
+                @apply absolute left-0 bottom-0 h-0.5 w-full bg-secondary;
+            }
+        }
+    }
+}
+

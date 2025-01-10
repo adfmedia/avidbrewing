@@ -1,0 +1,145 @@
+@layer components {
+    .competition-detail {
+        .entry-price {
+            @apply flex items-end justify-center mb-2;
+
+            .price {
+                @apply text-xl leading-none mr-1;
+            }
+
+            .lbl {
+                @apply text-xs leading-none uppercase;
+            }
+        }
+
+        .basket-form {
+
+            .ticket-quantity-slider {
+                @apply flex flex-wrap flex-col sm:flex-nowrap my-8 overflow-hidden;
+
+                .input-wrap {
+                    @apply w-full  px-4 md:px-8 mt-12 mb-6;
+
+                    .label {
+                        @apply mb-0;
+                    }
+                    .input {
+                        @apply w-16 p-2 border-none bg-transparent font-bold;
+                        -webkit-appearance: none;
+                        -moz-appearance: textfield;
+                    }
+                }
+
+                .slider-wrap {
+                    @apply w-full flex items-end pt-4 px-8 my-6;
+
+                    .slider-btn {
+                        @apply size-5 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 mb-1.5;
+
+                        &.minus {
+                            @apply mr-1 border border-gray-900 ;
+                        }
+
+                        &.plus {
+                            @apply ml-1 border border-gray-900 ;
+                        }
+                    }
+
+                    .range-tooltip-wrap {
+                        @apply relative w-full pt-9 -mb-px;
+
+                        .slider-tooltip {
+                            @apply absolute top-0 whitespace-nowrap;
+                            left: calc(var(--left-pos) + var(--left-offset));
+
+                            .tooltip-inner {
+                                @apply relative -translate-x-1/2 py-1 px-2 bg-primary text-gray-900 text-sm font-bold ;
+
+                                &::after {
+                                    @apply border-4 border-b-0 border-primary border-l-transparent border-r-transparent w-0 h-0 absolute top-full left-1/2 -translate-x-0.5;
+                                    content: "";
+                                }
+                            }
+                        }
+
+                        .slider {
+                            @apply w-full h-2 bg-goldDark/10 rounded-3xl;
+                            -webkit-appearance: none;
+
+                            /* Styles for range bar */
+                            &::-webkit-slider-runnable-track {
+                                @apply w-full h-2 bg-goldDark/10 rounded-3xl;
+                            }
+                            /* Styles for range handle */
+                            &::-webkit-slider-thumb {
+                                @apply size-6 rounded-full bg-primary -mt-2;
+                                -webkit-appearance: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .entry-progress {
+            @apply mb-1;
+
+            .progress-labels {
+                @apply flex items-center justify-between text-xs uppercase whitespace-nowrap;
+
+                .count {
+                    @apply flex;
+
+                    .sold {}
+                    .sep {}
+                    .total {}
+                }
+
+                .percent {
+                    @apply flex;
+
+                    .pcnt {
+                        @apply mr-px;
+                    }
+                    .lbl {}
+                }
+            }
+        }
+
+        .progress-bar {
+            @apply w-full h-3 bg-gray-900  mb-2;
+
+            .progress {
+                @apply w-0 h-full bg-secondary ;
+                width: var(--bar-width);
+            }
+        }
+
+        .grid-prize-bracket  {
+
+            div {
+                @apply p-3 text-center rounded-md  bg-gray-900 text-white;
+            }
+            @media (max-width: 420px) {
+                div {
+                    @apply p-2 text-sm;
+                }
+            }
+
+            }
+        .grid-prize-credit  {
+
+            div {
+                @apply text-gray-900 p-3 text-center rounded-md  border-2 border-secondary;
+            }
+
+            @media (max-width: 420px) {
+                div {
+                    @apply p-2 text-sm;
+                }
+            }
+
+        }
+
+    }
+}

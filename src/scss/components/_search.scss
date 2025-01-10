@@ -1,0 +1,21 @@
+@layer components {
+    .header-search-form {
+        @apply flex items-center relative;
+
+        .search-input {
+            @apply py-1 px-2 pr-7 text-sm leading-6 rounded-md border-gray-300 focus:border-primary transition-colors;
+        }
+
+        .search-btn {
+            @apply absolute right-2 top-2 mt-px;
+
+            .search-icon {
+                @apply w-4 h-4 text-primary hover:text-primary transition-colors;
+            }
+        }
+    }
+
+    .search-highlight {
+        @apply bg-yellow-400/50;
+    }
+}

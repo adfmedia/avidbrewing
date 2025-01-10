@@ -1,0 +1,17 @@
+@layer components {
+    .countdown {
+        @apply flex items-stretch justify-center gap-x-6 ;
+
+        .elem {
+            @apply flex flex-col items-center;
+
+            .unit {
+                @apply text-sm mb-1 font-bold;
+            }
+
+            .lbl {
+                @apply text-sm font-bold text-sm;
+            }
+        }
+    }
+}

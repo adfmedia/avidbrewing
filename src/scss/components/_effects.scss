@@ -1,0 +1,185 @@
+.bottom-circle-cut {
+    --mask: radial-gradient(20px at 20px 100%,#0000 98%,#000) -20px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+.top-circle-cut {
+    --mask: radial-gradient(20px at 20px 0,#0000 98%,#000) -20px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.circle-cut {
+    --r: 10px; /* cut size */
+    mask: radial-gradient(var(--r) at right,#0000 calc(100% - 1px),#000);
+}
+.circle-cut-left {
+    --r: 10px; /* cut size */
+    mask: radial-gradient(var(--r) at left,#0000 calc(100% - 1px),#000);
+}
+.bottom-scooped-border {
+    --mask: radial-gradient(5px at bottom,#0000 97%,#000) 50% / 15.5px 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+.top-scooped-border  {
+        --mask:
+         linear-gradient(to bottom,#0000 20px,#000 0), radial-gradient(8px,#000 98%,#0000) top/20.5px 40px;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+.bottom-scooped-border-small {
+    --mask: radial-gradient(6px at bottom,#0000 97%,#000) 50% / 25.5px 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+.bottom-scalloped-border {
+    --mask:
+        linear-gradient(to bottom,#0000 23px,#000 0), radial-gradient(7px,#000 98%,#0000) top/20.5px 45px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+.circle {
+    background: radial-gradient(ellipse at center, #5A5A5A 0%, #5A5A5A 30%, transparent 30%);
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+    background-position: 5px center;
+    width: 100%;
+    height: 50px;
+}
+.circle-y {
+    background: radial-gradient(ellipse at center, #00C76F 0%, #00C76F 30%, transparent 30%);
+    background-size: 20px 20px;
+    background-repeat: repeat-y;
+    background-position: 5px center;
+    width: 20%;
+    height: 200px;
+}
+.circle-green {
+    background: radial-gradient(ellipse at center, #00C76F 0%, #00C76F 30%, transparent 30%);
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+    background-position: 5px center;
+    width: 98%;
+    height: 50px;
+}
+.circle-gray {
+    background: radial-gradient(ellipse at center, #F8F6F0 0%, #F8F6F0 30%, transparent 30%);
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+    background-position: 5px center;
+    width: 100%;
+    height: 20px;
+}
+.ribbon {
+    @apply w-[320px] h-[350px] absolute;
+
+    .ticketOne {
+        @apply absolute top-[0.5rem] right-[4rem] sm:right-[5rem] lg:right-[7rem];
+        rotate: (24deg);
+    }
+    .ticketTwo {
+        @apply absolute left-[7rem] bottom-[0.5rem] ;
+        rotate: (24deg);
+    }
+    span {
+        @apply absolute block w-[392px] lg:w-[450px] p-2.5 bg-secondary text-gray-900 uppercase text-center -rotate-180;
+
+    }
+
+    &--black {
+        span {
+        @apply bg-gray-900 text-white;
+        }
+    }
+}
+
+.ribbon-bottom-right {
+    @apply bottom-[25px] right-[45px];
+}
+
+.ribbon-bottom-right span {
+    @apply md:left-[20px] left-0 bottom-[15px];
+    transform: rotate(-25deg);
+}
+
+@media (max-width: 834px) {
+    .container {
+        max-width: 834px;
+    }
+}
+.cominsoon {
+    grid-template-columns: repeat(7, 1fr);
+    display: grid;
+    gap: 30px;
+}
+@media (max-width: 1194px) {
+    .cominsoon {
+        grid-template-columns: repeat(5, 1fr);
+
+        div:nth-child(6) {
+            @apply hidden;
+        }
+        div:nth-child(7) {
+            @apply hidden;
+        }
+
+    }
+}
+@media (max-width: 1024px) {
+    .cominsoon {
+        grid-template-columns: repeat(4, 1fr);
+        div:nth-child(5) {
+            @apply hidden;
+        }
+        div:nth-child(6) {
+            @apply hidden;
+        }
+        div:nth-child(7) {
+            @apply hidden;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .cominsoon {
+        grid-template-columns: repeat(2, 1fr);
+        div:nth-child(3) {
+            @apply hidden;
+        }
+        div:nth-child(4) {
+            @apply hidden;
+        }
+        div:nth-child(5) {
+            @apply hidden;
+        }
+        div:nth-child(6) {
+            @apply hidden;
+        }
+        div:nth-child(7) {
+            @apply hidden;
+        }
+    }
+}
+@media (max-width: 380px) {
+    .cominsoon {
+        grid-template-columns: repeat(1, 1fr);
+        div:nth-child(2) {
+            @apply hidden;
+        }
+        div:nth-child(3) {
+            @apply hidden;
+        }
+        div:nth-child(4) {
+            @apply hidden;
+        }
+        div:nth-child(5) {
+            @apply hidden;
+        }
+        div:nth-child(6) {
+            @apply hidden;
+        }
+        div:nth-child(7) {
+            @apply hidden;
+        }
+    }
+}

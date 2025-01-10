@@ -1,0 +1,259 @@
+/* purgecss start ignore */
+@layer components {
+    .cms-content {
+        h2, h3, h4, h5, h6 {
+            @apply text-gray-900 mb-4 uppercase font-serenityBold font-bold ;
+        }
+
+        h2 {
+            @apply text-3xl py-2 lg:text-4xl lg:py-3;
+        }
+
+        h3 {
+            @apply text-3xl py-2 lg:text-4xl lg:py-3;
+        }
+
+        h4 {
+            @apply text-2xl py-2 lg:text-3xl lg:py-3;
+        }
+
+        h5 {
+            @apply text-xl py-2 lg:text-2xl lg:py-3;
+        }
+
+        h6 {
+            @apply text-lg;
+        }
+
+        p {
+            @apply mb-4;
+
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+
+        a:not(.btn) {
+            @apply text-secondary underline transition-colors duration-300 hover:text-primary;
+        }
+
+        strong {
+            @apply font-bold;
+        }
+
+        ol {
+            @apply my-4 ml-0 list-decimal space-y-3;
+        }
+        ol ol li {
+            list-style-type: lower-alpha
+        }
+        ol ol ol li {
+            list-style-type: lower-roman
+        }
+
+        ul {
+            @apply my-5;
+
+            li {
+                @apply relative pl-3;
+
+
+            }
+        }
+
+        table {
+            @apply mb-4;
+
+            tr, td {
+                @apply py-4 px-2 border-b border-gray-300 align-top;
+            }
+        }
+
+        blockquote {
+            @apply font-medium italic text-gray-600  my-6 pl-4;
+            quotes: "\201C""\201D""\2018""\2019";
+        }
+
+        .float-image-right {
+            @apply float-right p-3 pr-0;
+        }
+
+        .float-image-left {
+            @apply float-left p-3 pl-0;
+        }
+
+
+    .two-col-list {
+        @apply columns-1 my-8 xs:columns-2;
+    }
+
+    .bg-grey-video {
+        @apply bg-gray-400;
+    }
+
+    .h-video-wysiwyg {
+        @apply min-h-[23rem];
+    }
+
+    table {
+        tr:nth-child(even) {
+            @apply bg-gray-200;
+        }
+    }
+
+    [data-video-preload] {
+        h3 {
+            @apply text-white text-4xl mt-0;
+        }
+    }
+}
+
+.mce-content-body {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}
+
+
+.share-icons {
+    li {
+        list-style: none;
+        &:before {
+            position: absolute;
+            left: 0px;
+            top: -0.125rem;
+            color: var(--gray-900);
+            content: " "!important;
+            font-size: 0;
+        }
+    }
+}
+
+}
+.icon-facebook {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+.icon-instagram {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+.icon-twitter {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+.icon-twitterx {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+.icon-youtube {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+.icon-linkedin {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+.icon-whatsapp {
+    color: #212121;
+    &:hover {
+        color:#fff;
+    }
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+tr:nth-child(odd) {
+    background-color: #f3f4f6;
+}
+
+table th,
+table td {
+    padding: .625em!important;
+    text-align: left;
+}
+
+table th {
+    font-size: .85em;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+/* purgecss end ignore */
+

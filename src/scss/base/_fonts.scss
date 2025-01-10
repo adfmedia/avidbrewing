@@ -1,0 +1,11 @@
+/* Fonts */
+@font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+    font-display: swap;
+    src: url('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.woff2') format('woff2'),
+    url('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+}
+
